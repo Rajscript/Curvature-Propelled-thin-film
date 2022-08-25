@@ -4,11 +4,25 @@ import sys
 import re
 import numpy as np
 
-# Our simulation model maps a floating film's energy at varying radial position of the fluid drop. Each simulation is stored inside separate folders with the their given discplacement. Our goal is to extract all these raw energy data in one csv file for further analysis and cleaning.  
+"""
+Our simulation model maps a floating film at varying radial position of the fluid drop. Each
+simulation is stored inside separate folders with the their given discplacement. Our goal is 
+to extract all these raw energies in one csv file for further analysis and cleaning.  
+"""
 
 class energy_data_extraction:
  def __init__(self, Vol, meshLength, sr):
-     
+      """
+      :param Vol:
+             Volume of the liquid drop in our simulation model
+      :type Vol: float  
+      :param meshLength:
+             Mesh refinement that regulates the triangulations of the surface
+      :type meshLength: float
+      :param sr:
+             Sheet radius of the thin fim floating on the liquid interface
+      :type sr: float      
+      """
       self.Vol=Vol
       self.meshLength=meshLength
       self.sr=sr
